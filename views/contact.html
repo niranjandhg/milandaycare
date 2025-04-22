@@ -2,32 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us - Milan Daycare</title>
+  <title>Contact Us - Little Heaven Daycare</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Contact Milan Daycare</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Little Heaven</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Send Us a Message</h2>
-    <form action="/contact" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </main>
+  <section class="contact-header">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you. Send us a message, and we'll get back to you soon!</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Milan Daycare. All rights reserved.</p>
+  <div class="contact-details">
+    <div class="container">
+      <h3>Let's get connected!</h3>
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <h4>Mrs. Milan Lamichanne</h4>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:milanlm@gmail.com">milanlm@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+100000000">+1 00000000</a></p>
+        </div>
+        <div class="contact-card">
+          <h4>Mr. Arjun Lamichanne</h4>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:arjunlm@gmail.com">arjunlm@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+100000000">+1 00000000</a></p>
+        </div>
+      </div>
+  
+      <h3>Our Location</h3>
+      <div class="map-container" style="margin: 1em 0;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.9509104830609!2d-104.53085432481578!3d50.417321589750344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531ea019cb08af1f%3A0x361aebf631879fcf!2s7070%20Wascana%20Cove%20Dr%2C%20Regina%2C%20SK%20S4V%203E9!5e1!3m2!1sen!2sca!4v1745292495406!5m2!1sen!2sca" 
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>  
+
+  <section class="contact-form">
+    <div class="container">
+      <p>Do you have any other inquiries? Leave us a message.</p>
+      <form action="/contact" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Little Heaven Daycare | All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>

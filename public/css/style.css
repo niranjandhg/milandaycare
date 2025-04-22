@@ -1,63 +1,299 @@
+/* style.css */
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
-  }
-  
-  header {
-    background-color: #4A90E2;
-    padding: 20px;
-    color: white;
-    text-align: center;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 30px;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  footer {
-    background-color: #4A90E2;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-  }
-  
-  form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  form button {
-    padding: 12px;
-    background-color: #4A90E2;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  form button:hover {
-    background-color: #357ABD;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff7f0;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Update for the navigation bar */
+.navbar {
+  background-color: #f88655;
+  padding: 10px 0; /* Reduce padding for smaller height */
+  text-align: center;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar h1.logo {
+  font-size: 1.6rem; /* Smaller font size for the logo */
+  color: #b4f5de;
+}
+
+.navbar nav a {
+  font-size: 1rem; /* Adjust font size for links */
+  color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar nav a:hover {
+  color: #d9e391; /* Hover effect */
+}
+
+.hero {
+  background: url('/images/hero-kids.jpg') no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #e05548;
+}
+
+.footer {
+  background-color: #ffe9e3;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.page-header {
+  background-color: #ffe0d3;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.page-header h2 {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.mission-team {
+  padding: 3rem 2rem;
+  background-color: #fffaf5;
+}
+
+.mission, .team {
+  margin-bottom: 2.5rem;
+}
+
+.mission h3, .team h3 {
+  color: #ff6f61;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mission p, .team p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+.services-list {
+  padding: 3rem 2rem;
+  background-color: #fffaf5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #ff6f61;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+/* Contact Page Styles */
+.contact-header {
+  background-color: #ffe0d3;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 0.8rem;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background-color: #fffaf5;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline-color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.contact-form button:hover {
+  background-color: #e05548;
+}
+
+/* Additional Container Styling for Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* Contact Info Styles */
+.contact-info {
+  background-color: #fffaf5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-info a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Map Styles */
+.contact-map {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-map iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-details {
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+.contact-details a:hover {
+  text-decoration: underline;
+}
+.contacts-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 250px;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-card h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-card i {
+  margin-right: 0.5rem;
+  color: #333;
+}
