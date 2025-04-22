@@ -1,11 +1,11 @@
-/* style.css */
-
+/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff7f0;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .container {
@@ -15,11 +15,12 @@ body {
   padding: 2rem 0;
 }
 
-/* Update for the navigation bar */
+/* Navigation Bar */
 .navbar {
   background-color: #f88655;
-  padding: 10px 0; /* Reduce padding for smaller height */
+  padding: 10px 0;
   text-align: center;
+  transition: padding 0.3s ease; /* Smooth padding transition */
 }
 
 .navbar .container {
@@ -32,23 +33,61 @@ body {
 }
 
 .navbar h1.logo {
-  font-size: 1.6rem; /* Smaller font size for the logo */
+  font-size: 1.6rem;
   color: #b4f5de;
 }
 
 .navbar nav a {
-  font-size: 1rem; /* Adjust font size for links */
+  font-size: 1rem;
   color: #333;
   margin: 0 15px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .navbar nav a:hover {
-  color: #d9e391; /* Hover effect */
+  color: #d9e391;
 }
 
+/* Hamburger Menu */
+.navbar .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar nav a {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav.active {
+    display: block;
+  }
+}
+
+/* Hero Section */
 .hero {
   background: url('/images/hero-kids.jpg') no-repeat center center/cover;
   color: rgb(0, 0, 0);
@@ -59,6 +98,7 @@ body {
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  transition: font-size 0.3s ease;
 }
 
 .hero p {
@@ -66,6 +106,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Buttons */
 .btn {
   background-color: #ff6f61;
   color: white;
@@ -74,13 +115,15 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
   background-color: #e05548;
+  transform: scale(1.05);
 }
 
+/* Footer */
 .footer {
   background-color: #ffe9e3;
   text-align: center;
@@ -88,18 +131,6 @@ body {
   margin-top: 2rem;
   font-size: 0.9rem;
 }
-.page-header {
-  background-color: #ffe0d3;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.page-header h2 {
-  font-size: 2rem;
-  color: #ff6f61;
-  margin-bottom: 1rem;
-}
-
 .mission-team {
   padding: 3rem 2rem;
   background-color: #fffaf5;
@@ -169,6 +200,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Contact Form */
 .contact-form {
   background-color: #fffaf5;
   padding: 3rem 2rem;
@@ -213,13 +245,7 @@ body {
   background-color: #e05548;
 }
 
-/* Additional Container Styling for Layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-/* Contact Info Styles */
+/* Contact Info */
 .contact-info {
   background-color: #fffaf5;
   padding: 2rem 0;
@@ -256,44 +282,53 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.contact-details {
-  margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-.contact-details a {
-  color: #007bff;
-  text-decoration: none;
-}
-.contact-details a:hover {
-  text-decoration: underline;
-}
-.contacts-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .contact-header p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
 }
 
-.contact-card {
-  flex: 1;
-  min-width: 250px;
-  background: #f4f4f4;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.contact-card h4 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.contact-card a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-card i {
-  margin-right: 0.5rem;
-  color: #333;
+/* Add transition effect for the navbar */
+.navbar nav {
+  transition: transform 0.3s ease;
 }
