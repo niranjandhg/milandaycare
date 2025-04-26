@@ -332,3 +332,66 @@ body {
 .navbar nav {
   transition: transform 0.3s ease;
 }
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001; /* Stay above nav */
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.4s ease;
+}
+
+/* When hamburger is active (menu opened) */
+.hamburger.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line2 {
+  opacity: 0;
+}
+
+.hamburger.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #efbaa4;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .navbar nav a {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+}
+
+
+
+

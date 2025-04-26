@@ -11,14 +11,19 @@
   <header class="navbar">
     <div class="container">
       <h1 class="logo">Little Heaven</h1>
-      <nav>
+      <div class="hamburger" id="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <nav id="mobile-menu">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/services">Services</a>
         <a href="/contact">Contact</a>
       </nav>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </div>
+    
   </header>
 
   <section class="page-header">
@@ -50,9 +55,13 @@
 </body>
 </html>
 
+
 <script>
-  function toggleMenu() {
-    const nav = document.querySelector('.navbar nav');
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
     nav.classList.toggle('active');
-  }
+  });
 </script>
