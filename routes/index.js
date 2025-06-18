@@ -8,5 +8,5 @@ router.get('/', (req, res) => res.sendFile(path.join(__dirname, '../views/index.
 router.get('/about', (req, res) => res.sendFile(path.join(__dirname, '../views/about.html')));
 router.get('/services', (req, res) => res.sendFile(path.join(__dirname, '../views/services.html')));
 router.get('/contact', (req, res) => res.sendFile(path.join(__dirname, '../views/contact.html')));
-
+router.get('/gallery', (req, res) => res.sendFile(path.join(__dirname, '../views/gallery.html')));
 module.exports = router;

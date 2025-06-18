@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Little Heaven Daycare - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
   <link rel="stylesheet" href="/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/gallery.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="navbar">
@@ -29,19 +29,10 @@
     
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Welcome to Little Heaven Daycare</h2>
-      <p>A nurturing, safe, and fun environment where your child can grow and shine!</p>
-      <a href="/about" class="btn">Learn More</a>
-    </div>
-  </section>
-  <section class="gallery">
-  <h2> <a href="/gallery" class="btn">Gallery</a></h2>
-  <div class="slider-container">
-   
-    <div class="slider-track">
-      <img src="/image/aquarium.jpg" alt="Happy kids at daycare"/>
+  <div class="gallery-grid" id="gallery">
+    <img src="/image/homedecorleft.jpg" alt="Happy kids at daycare"/>
+    <img src="/image/homedecorright.jpg" alt="Happy kids at daycare"/>
+     <img src="/image/aquarium.jpg" alt="Happy kids at daycare"/>
       <img src="/image/hallone.jpg" alt="Happy kids at daycare"/>
       <img src="/image/halltwo.jpg" alt="Happy kids at daycare"/>
       <img src="/image/hallwall.jpg" alt="Happy kids at daycare"/>
@@ -56,28 +47,15 @@
       <img src="/image/kidsroomfour.jpg" alt="Happy kids at daycare"/>
       <img src="/image/kidsroomfive.jpg" alt="Happy kids at daycare"/>
       <img src="/image/kidsroomsix.jpg" alt="Happy kids at daycare"/>
-
-    </div>
-   
   </div>
-</section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Little Heaven Daycare | All rights reserved.</p>
-    </div>
-  </footer>
+  <div class="lightbox" id="lightbox">
+    <button class="close" id="closeBtn">&times;</button>
+    <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Full view" />
+    <button class="nav-btn next" id="nextBtn">&#10095;</button>
+  </div>
 
+  <script src="/js/gallery.js"></script>
 </body>
 </html>
-
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
-</script>
