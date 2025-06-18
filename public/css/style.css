@@ -16,6 +16,8 @@ body {
 
 /* Navigation Bar */
 .navbar {
+  height:60px;
+  display:flex;
   background-color: #f88655;
   padding: 10px 0;
   text-align: center;
@@ -30,6 +32,21 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+/* Ensure the logo container doesn't break layout */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Style the logo image */
+.navbar-logo {
+  height: 100%;          /* Make logo as tall as the navbar */
+  max-height: 60px;      /* Optional: prevent it from stretching too large */
+  width: auto;           /* Maintain aspect ratio */
+  object-fit: contain;   /* Ensures clean rendering inside container */
+}
+
 
 .navbar h1.logo {
   font-size: 1.6rem;
