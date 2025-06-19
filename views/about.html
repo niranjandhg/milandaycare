@@ -10,7 +10,9 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Little Heaven</h1>
+      <div class="logo-container">
+      <h1><a href="/"><img src="/image/logo.png" class="navbar-logo" alt="Happy kids at daycare"/></a> </h1>
+      </div>
       <div class="hamburger" id="hamburger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -31,22 +33,44 @@
   <section class="page-header">
     <div class="container">
       <h2>About Little Heaven Daycare</h2>
-      <p>Creating a joyful space where children thrive through creativity, care, and fun learning.</p>
-    </div>
+      <p style="font-size: small;">We nurture children’s natural curiosity through play-based learning experiences. Our approach focuses on building strong emotional, cognitive, and social foundations, helping children develop confidence, empathy, and independence.Our caring and experienced staff create a warm, inclusive atmosphere where every child feels safe, supported, and inspired to explore the world around them.</p>
+    <p style="font-size:small; font-style: italic; text-align: center;">"A nurturing, safe, and fun environment where your child can grow and shine"</p>
+  </div>
   </section>
 
   <section class="mission-team">
     <div class="container">
       <div class="mission">
         <h3>🎯 Our Mission</h3>
-        <p>To support early childhood development through play, creativity, and compassionate care.</p>
+        <p> To support early childhood development through play, creativity, and compassionate care.
+      We believe that children grow best in an environment that values their uniqueness and fosters confidence, independence, and a lifelong love of learning.</p>
       </div>
+      <div class="mission">
+    <h3>📚 Our Approach</h3>
+   <ul id="approach-list">
+  <li>📖 Language and literacy development</li>
+  <li>🎨 Creative arts and imaginative play</li>
+  <li>🔢 Early math and science skills</li>
+  <li>🏃‍♂️ Gross and fine motor development</li>
+  <li>💬 Social-emotional learning and problem-solving</li>
+</ul>
+  </div>
 
-      <div class="team">
-        <h3>👩‍👩‍👧‍👦 Meet the Team</h3>
-        <p>Our caregivers are certified, experienced, and absolutely passionate about nurturing kids with love and kindness.</p>
-      </div>
+      <section class="team-section">
+        <h2>👩‍👧 Meet the Team</h2>
+  <div class="team-member">
+    <div class="team-text">
+      <h3>Ms. Milan Lamichanne</h3>
+      <p>
+        Milan is a certified Early Childhood Educator (ECE) with over 8 years of experience nurturing young minds. Her warm personality and playful teaching style create a comforting space for children to explore, learn, and grow.
+        She specializes in child-led play, creative arts, and emotional development. Families and children alike adore her gentle approach and dedication to building strong relationships.
+      </p>
     </div>
+    <div class="team-photo">
+      <img src="image/hallone.jpg" alt="ECE Milan Lamichanne">
+    </div>
+  </div>
+</section>
   </section>
 
   <footer class="footer">
@@ -65,5 +89,26 @@
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     nav.classList.toggle('active');
+  });
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const animateList = (selector) => {
+      const items = document.querySelectorAll(selector);
+      const triggerBottom = window.innerHeight * 0.9;
+
+      items.forEach((item, index) => {
+        const boxTop = item.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          setTimeout(() => {
+            item.style.opacity = 1;
+            item.style.transform = "translateY(0)";
+          }, index * 100);
+        }
+      });
+    };
+
+    animateList("#features-list li");   // for "Why Choose Us"
+    animateList("#approach-list li");   // for "Our Approach"
   });
 </script>

@@ -14,6 +14,7 @@
       <div class="logo-container">
       <h1><a href="/"><img src="/image/logo.png" class="navbar-logo" alt="Happy kids at daycare"/></a> </h1>
       </div>
+      
       <div class="hamburger" id="hamburger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -32,14 +33,33 @@
   </header>
 
   <section class="hero">
+    <p style="font-size:small; font-style: italic;">"A nurturing, safe, and fun environment where your child can grow and shine"</p>
+    <h1 class="logo">
+  <span class="main-title">Little Heaven</span><br>
+  <span class="subtitle">DAYCARE CENTER</span>
+</h1>
     <div class="container">
-      <h2>Welcome to Little Heaven Daycare</h2>
-      <p>A nurturing, safe, and fun environment where your child can grow and shine!</p>
-      <a href="/about" class="btn">Learn More</a>
+      <h3>WELCOME!</h3>
+      <p style="text-align:left;">At Little Heaven Daycare Center, we provide a nurturing and inclusive environment where children grow, learn, and thrive. Our licensed programs support infants, toddlers, preschoolers, and school-aged children with activities designed to spark curiosity, creativity, and confidence.
+        Conveniently located in the Eastern Side of Regina, Saskatchewan, Little Heaven is licensed by Early Learning and Child Care through the Saskatchewan Ministry of Education. Our caring educators follow a child-centered approach, adapting to each child’s unique interests and developmental needs.</p>
+       <section class="why-choose-us">
+  <h2>Why Choose Us?</h2>
+  <ul id="features-list">
+    <li>Safe & nurturing environment</li>
+    <li>Licensed by Early Learning and Child Care, SK</li>
+    <li>Qualified, passionate educator</li>
+    <li>Daily activities that promote creativity, literacy, and life skills</li>
+    <li>Nutritious snacks and meals provided</li>
+    <li>Conveniently located in Regina with easy access</li>
+  </ul>
+  <a href="/about" class="btn">Learn More</a>
+</section>   
     </div>
+    
+    <p style="text-align:center;">We invite you to explore our website to learn more about our programs and caring philosophy. To book a tour or speak with our team, call us today at (306) 000000 — we can’t wait to welcome you and your little one to the Little Heaven family!</p>
   </section>
   <section class="gallery">
-  <h2> <a href="/gallery" class="btn">Gallery</a></h2>
+  <h3> <a href="/gallery" class="btn">Gallery</a></h3>
   <div class="slider-container">
    
     <div class="slider-track">
@@ -67,6 +87,7 @@
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Little Heaven Daycare | All rights reserved.</p>
+      <a href="/about">About Us</a>
     </div>
   </footer>
 
@@ -83,3 +104,20 @@
     nav.classList.toggle('active');
   });
 </script>
+<script>
+  window.addEventListener("scroll", function () {
+    const items = document.querySelectorAll("#features-list li");
+    const triggerBottom = window.innerHeight * 0.9;
+
+    items.forEach((item, index) => {
+      const boxTop = item.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        setTimeout(() => {
+          item.style.opacity = 1;
+          item.style.transform = "translateY(0)";
+        }, index * 100); // slight stagger animation
+      }
+    });
+  });
+</script>
+
